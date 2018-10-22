@@ -1,0 +1,47 @@
+spring:
+    datasource:
+        url: jdbc:oracle:thin:@172.28.11.115:1521:prod
+        username: apps1
+        password: apps1
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        type: com.alibaba.druid.pool.DruidDataSource
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        minIdle: 1
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'  FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        maxPoolPreparedStatementPerConnectionSize: 20
+    thymeleaf:
+      cache: false
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+
+info:
+  app:
+    name: '@project.artifactId@'
+    encoding: '@project.build.sourceEncoding@'
+    java:
+      source: '@java.version@'
+      target: '@java.version@'
+
+management:
+  security:
+    enabled: false
+
+printConfig:
+  mapProps:
+    HP: istoreQuoteHPService
+    10743: istoreQuoteDellSerivce
+    DELLDISPLAY: istoreQuoteDellDisplayService
+    HPXINTONGLU: istoreQuoteHpXinTonLuSerivce
+
+foo: Version 3.0
