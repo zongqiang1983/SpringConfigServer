@@ -44,4 +44,4 @@ printConfig:
     DELLDISPLAY: istoreQuoteDellDisplayService
     HPXINTONGLU: istoreQuoteHpXinTonLuSerivce
 
-foo: Version 3.0
+foo: Version 5.0
